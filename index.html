@@ -1,0 +1,439 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Trà Sữa Ngọt Ngào - Website Chính Thức</title>
+    
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body class="min-h-screen">
+    <header class="bg-white shadow-lg sticky top-0 z-50">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="flex justify-between items-center h-20">
+                
+                <a href="#" class="flex items-center space-x-2 text-2xl font-black text-secondary">
+                    <span class="text-3xl">☕</span>
+                    <span class="text-primary tracking-widest">TRÀ SỮA</span><span class="text-secondary tracking-widest"> NGỌT NGÀO</span>
+                </a>
+                <nav class="hidden md:flex space-x-8">
+                    <a href="#home" class="nav-item text-gray-700 hover:text-secondary p-2 transition duration-150 rounded-lg" data-page="home">Trang Chủ</a>
+                    <a href="#menu" class="nav-item text-gray-700 hover:text-secondary p-2 transition duration-150 rounded-lg" data-page="menu">Thực Đơn</a>
+                    <a href="#promotions" class="nav-item text-gray-700 hover:text-secondary p-2 transition duration-150 rounded-lg" data-page="promotions">Khuyến Mãi</a>
+                    <a href="#about" class="nav-item text-gray-700 hover:text-secondary p-2 transition duration-150 rounded-lg" data-page="about">Về Chúng Tôi</a>
+                    <a href="#contact" class="nav-item text-gray-700 hover:text-secondary p-2 transition duration-150 rounded-lg" data-page="contact">Liên Hệ</a>
+                </nav>
+
+                
+                <button id="mobile-menu-btn" class="md:hidden p-2 rounded-md text-gray-700 hover:bg-gray-100">
+                    <svg class="h-6 w-6" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16m-7 6h7" />
+                    </svg>
+                </button>
+            </div>
+        </div>
+
+        
+        <div id="mobile-menu" class="md:hidden hidden bg-white shadow-xl">
+            <div class="pt-2 pb-3 space-y-1">
+                <a href="#home" class="nav-item block px-3 py-2 text-base font-medium text-gray-700 hover:bg-gray-50" data-page="home">Trang Chủ</a>
+                <a href="#menu" class="nav-item block px-3 py-2 text-base font-medium text-gray-700 hover:bg-gray-50" data-page="menu">Thực Đơn</a>
+                <a href="#promotions" class="nav-item block px-3 py-2 text-base font-medium text-gray-700 hover:bg-gray-50" data-page="promotions">Khuyến Mãi</a>
+                <a href="#about" class="nav-item block px-3 py-2 text-base font-medium text-gray-700 hover:bg-gray-50" data-page="about">Về Chúng Tôi</a>
+                <a href="#contact" class="nav-item block px-3 py-2 text-base font-medium text-gray-700 hover:bg-gray-50" data-page="contact">Liên Hệ</a>
+            </div>
+        </div>
+    </header>
+
+    
+    <main class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-12">
+        <section id="home" class="page-content active">
+            <div class="text-center py-20 bg-primary rounded-3xl shadow-xl text-white mb-12">
+                <h1 class="text-5xl md:text-7xl font-extrabold mb-4 animate-pulse">Chào Mừng Đến Với Trà Sữa Ngọt Ngào</h1>
+                <p class="text-xl md:text-3xl mb-8 font-light">Nơi hương vị truyền thống gặp gỡ sự sáng tạo hiện đại.</p>
+                <a href="#menu" class="inline-block bg-white text-primary hover:bg-gray-100 font-bold py-3 px-8 rounded-full shadow-lg transition duration-300 transform hover:scale-105" onclick="showPage('menu')">
+                    Khám Phá Thực Đơn Ngay!
+                </a>
+            </div>
+            <div class="grid md:grid-cols-3 gap-8 text-center">
+                <div class="bg-white p-6 rounded-2xl shadow-md transform hover:shadow-lg transition duration-300">
+                    <span class="text-5xl mb-3 block text-primary">🌱</span>
+                    <h3 class="text-xl font-semibold text-secondary mb-2">Trà Tươi Nguyên Chất</h3>
+                    <p class="text-gray-600">Tuyển chọn từ những đồi chè chất lượng cao, giữ trọn hương thơm tự nhiên.</p>
+                </div>
+                <div class="bg-white p-6 rounded-2xl shadow-md transform hover:shadow-lg transition duration-300">
+                    <span class="text-5xl mb-3 block text-primary">🥛</span>
+                    <h3 class="text-xl font-semibold text-secondary mb-2">Sữa Kem Béo Ngậy</h3>
+                    <p class="text-gray-600">Sử dụng sữa tươi cao cấp, mang lại độ béo hoàn hảo cho ly trà sữa.</p>
+                </div>
+                <div class="bg-white p-6 rounded-2xl shadow-md transform hover:shadow-lg transition duration-300">
+                    <span class="text-5xl mb-3 block text-primary">🧋</span>
+                    <h3 class="text-xl font-semibold text-secondary mb-2">Trân Châu Hoàn Hảo</h3>
+                    <p class="text-gray-600">Trân châu đen dẻo dai, được nấu mới mỗi ngày theo công thức bí truyền.</p>
+                </div>
+            </div>
+        </section>
+        <section id="menu" class="page-content">
+            <h2 class="text-4xl font-bold text-secondary border-b-4 border-primary pb-3 mb-8">THỰC ĐƠN HÔM NAY</h2>
+            <div class="flex flex-wrap gap-4 mb-8">
+                <button class="menu-tab bg-primary text-white px-4 py-2 rounded-full font-semibold transition hover:opacity-90 active-tab" data-category="all">Tất Cả</button>
+                <button class="menu-tab bg-white text-secondary border border-primary px-4 py-2 rounded-full font-semibold transition hover:bg-primary hover:text-white" data-category="classic">Trà Sữa Truyền Thống</button>
+                <button class="menu-tab bg-white text-secondary border border-primary px-4 py-2 rounded-full font-semibold transition hover:bg-primary hover:text-white" data-category="special">Đặc Biệt & Trái Cây</button>
+                <button class="menu-tab bg-white text-secondary border border-primary px-4 py-2 rounded-full font-semibold transition hover:bg-primary hover:text-white" data-category="topping">Topping</button>
+            </div>
+            <div id="menu-list" class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
+                <div class="menu-item bg-white p-5 rounded-xl shadow-lg hover:shadow-2xl transition duration-300" data-category="classic">
+                    <div class="flex items-center space-x-4">
+                        <span class="text-4xl">🧋</span>
+                        <div>
+                            <h3 class="text-xl font-bold text-secondary">Trà Sữa Trân Châu Hoàng Gia</h3>
+                            <p class="text-gray-500">Trà đen thơm lừng, trân châu dẻo dai.</p>
+                        </div>
+                        <span class="ml-auto text-xl font-extrabold text-primary">35.000đ</span>
+                    </div>
+                </div>
+                <div class="menu-item bg-white p-5 rounded-xl shadow-lg hover:shadow-2xl transition duration-300" data-category="classic">
+                    <div class="flex items-center space-x-4">
+                        <span class="text-4xl">🍯</span>
+                        <div>
+                            <h3 class="text-xl font-bold text-secondary">Trà Sữa Ô Long Mật Ong</h3>
+                            <p class="text-gray-500">Hương ô long nhẹ nhàng, vị ngọt thanh từ mật ong.</p>
+                        </div>
+                        <span class="ml-auto text-xl font-extrabold text-primary">40.000đ</span>
+                    </div>
+                </div>
+                <div class="menu-item bg-white p-5 rounded-xl shadow-lg hover:shadow-2xl transition duration-300" data-category="special">
+                    <div class="flex items-center space-x-4">
+                        <span class="text-4xl">🧀</span>
+                        <div>
+                            <h3 class="text-xl font-bold text-secondary">Trà Xoài Kem Phô Mai Tuyết</h3>
+                            <p class="text-gray-500">Trà trái cây chua ngọt, lớp kem phô mai mặn béo.</p>
+                        </div>
+                        <span class="ml-auto text-xl font-extrabold text-primary">55.000đ</span>
+                    </div>
+                </div>
+                <div class="menu-item bg-white p-5 rounded-xl shadow-lg hover:shadow-2xl transition duration-300" data-category="special">
+                    <div class="flex items-center space-x-4">
+                        <span class="text-4xl">🍓</span>
+                        <div>
+                            <h3 class="text-xl font-bold text-secondary">Hồng Trà Dâu Tươi</h3>
+                            <p class="text-gray-500">Thức uống giải khát tuyệt vời với dâu tây tươi.</p>
+                        </div>
+                        <span class="ml-auto text-xl font-extrabold text-primary">45.000đ</span>
+                    </div>
+                </div>
+                <div class="menu-item bg-white p-5 rounded-xl shadow-lg hover:shadow-2xl transition duration-300" data-category="classic">
+                    <div class="flex items-center space-x-4">
+                        <span class="text-4xl">🍮</span>
+                        <div>
+                            <h3 class="text-xl font-bold text-secondary">Trà Sữa Pudding Trứng</h3>
+                            <p class="text-gray-500">Béo thơm, mịn màng với pudding trứng nhà làm.</p>
+                        </div>
+                        <span class="ml-auto text-xl font-extrabold text-primary">38.000đ</span>
+                    </div>
+                </div>
+                <div class="menu-item bg-white p-5 rounded-xl shadow-lg hover:shadow-2xl transition duration-300" data-category="topping">
+                    <div class="flex items-center space-x-4">
+                        <span class="text-4xl">🟠</span>
+                        <div>
+                            <h3 class="text-xl font-bold text-secondary">Thạch Dừa Giòn</h3>
+                            <p class="text-gray-500">Tăng thêm độ giòn sần sật cho ly nước.</p>
+                        </div>
+                        <span class="ml-auto text-xl font-extrabold text-primary">5.000đ</span>
+                    </div>
+                </div>
+                <div class="menu-item bg-white p-5 rounded-xl shadow-lg hover:shadow-2xl transition duration-300" data-category="topping">
+                    <div class="flex items-center space-x-4">
+                        <span class="text-4xl">🖤</span>
+                        <div>
+                            <h3 class="text-xl font-bold text-secondary">Trân Châu Đen Đặc Biệt</h3>
+                            <p class="text-gray-500">Trân châu siêu dẻo, nấu với đường nâu.</p>
+                        </div>
+                        <span class="ml-auto text-xl font-extrabold text-primary">7.000đ</span>
+                    </div>
+                </div>
+            </div>
+        </section>        
+        <section id="promotions" class="page-content">
+            <h2 class="text-4xl font-bold text-secondary border-b-4 border-primary pb-3 mb-8">KHUYẾN MÃI HẤP DẪN</h2>
+            <div class="space-y-6">                <div class="bg-white p-6 rounded-2xl shadow-xl border-l-8 border-red-500 flex flex-col md:flex-row items-start md:items-center">
+                    <div class="flex-shrink-0 mr-6 mb-4 md:mb-0">
+                        <span class="text-5xl text-red-500">🔥</span>
+                    </div>
+                    <div>
+                        <h3 class="text-2xl font-bold text-secondary mb-2">MUA 2 TẶNG 1: Happy Hour Mỗi Ngày!</h3>
+                        <p class="text-gray-600 mb-3">Áp dụng cho tất cả các loại trà sữa size M và L từ 14h00 đến 17h00 hàng ngày. Không áp dụng cho các món đặc biệt.</p>
+                        <span class="inline-block bg-red-500 text-white text-sm font-semibold px-3 py-1 rounded-full">Hết Hạn: 31/12/2025</span>
+                    </div>
+                </div>
+                <div class="bg-white p-6 rounded-2xl shadow-xl border-l-8 border-green-500 flex flex-col md:flex-row items-start md:items-center">
+                    <div class="flex-shrink-0 mr-6 mb-4 md:mb-0">
+                        <span class="text-5xl text-green-500">🎉</span>
+                    </div>
+                    <div>
+                        <h3 class="text-2xl font-bold text-secondary mb-2">GIẢM 10% Cho Học Sinh/Sinh Viên</h3>
+                        <p class="text-gray-600 mb-3">Xuất trình thẻ học sinh/sinh viên hợp lệ để được giảm ngay 10% trên tổng hóa đơn. Áp dụng cả tuần.</p>
+                        <span class="inline-block bg-green-500 text-white text-sm font-semibold px-3 py-1 rounded-full">Vô Thời Hạn</span>
+                    </div>
+                </div>
+
+               
+                <div class="bg-white p-6 rounded-2xl shadow-xl border-l-8 border-blue-500 flex flex-col md:flex-row items-start md:items-center">
+                    <div class="flex-shrink-0 mr-6 mb-4 md:mb-0">
+                        <span class="text-5xl text-blue-500">📱</span>
+                    </div>
+                    <div>
+                        <h3 class="text-2xl font-bold text-secondary mb-2">Miễn Phí Topping Khi Đặt Hàng Qua App</h3>
+                        <p class="text-gray-600 mb-3">Tải ứng dụng của chúng tôi và nhận ngay 1 topping miễn phí (trân châu hoặc thạch dừa) cho đơn hàng đầu tiên.</p>
+                        <span class="inline-block bg-blue-500 text-white text-sm font-semibold px-3 py-1 rounded-full">Chương trình Mới</span>
+                    </div>
+                </div>
+            </div>
+        </section>
+        
+       
+        <section id="about" class="page-content">
+            <h2 class="text-4xl font-bold text-secondary border-b-4 border-primary pb-3 mb-8">HÀNH TRÌNH CỦA CHÚNG TÔI</h2>
+
+            <div class="bg-white p-8 rounded-2xl shadow-xl">
+                <p class="text-lg text-gray-700 leading-relaxed mb-6">
+                    Trà Sữa Ngọt Ngào được thành lập vào năm 2020 với một niềm đam mê duy nhất: mang đến ly trà sữa hoàn hảo nhất. Chúng tôi tin rằng, một ly trà sữa ngon không chỉ đơn thuần là sự kết hợp của trà và sữa, mà còn là sự cân bằng tinh tế giữa hương vị, độ tươi và chất lượng nguyên liệu.
+                </p>
+                <div class="grid md:grid-cols-2 gap-8">
+                    <div>
+                        <h3 class="text-2xl font-semibold text-primary mb-3">Sứ Mệnh Của Chúng Tôi</h3>
+                        <ul class="list-disc list-inside space-y-2 text-gray-600 ml-4">
+                            <li>Mang đến trải nghiệm trà sữa sạch, tươi và an toàn.</li>
+                            <li>Không ngừng sáng tạo các công thức độc đáo, phù hợp với khẩu vị người Việt.</li>
+                            <li>Xây dựng không gian ấm cúng, là nơi thư giãn lý tưởng cho mọi người.</li>
+                        </ul>
+                    </div>
+                    <div>
+                        <h3 class="text-2xl font-semibold text-primary mb-3">Giá Trị Cốt Lõi</h3>
+                        <p class="text-gray-600">
+                            Chất lượng là ưu tiên hàng đầu. Chúng tôi cam kết chỉ sử dụng nguyên liệu tự nhiên, không chất bảo quản. Trà được ủ mới mỗi 4 giờ, trân châu được nấu mới mỗi 2 giờ để đảm bảo độ dẻo và hương vị tốt nhất.
+                        </p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section id="contact" class="page-content">
+            <h2 class="text-4xl font-bold text-secondary border-b-4 border-primary pb-3 mb-8">LIÊN HỆ VÀ ĐỊA CHỈ</h2>
+
+            <div class="grid md:grid-cols-2 gap-8">
+                
+                <div class="bg-white p-8 rounded-2xl shadow-xl">
+                    <h3 class="text-2xl font-semibold text-secondary mb-4">Gửi Lời Nhắn Cho Chúng Tôi</h3>
+                    <form onsubmit="handleContactForm(event)">
+                        <div class="mb-4">
+                            <label for="name" class="block text-gray-700 font-medium mb-2">Họ tên</label>
+                            <input type="text" id="name" name="name" class="w-full px-4 py-2 border border-gray-300 rounded-lg focus:ring-primary focus:border-primary transition" required>
+                        </div>
+                        <div class="mb-4">
+                            <label for="email" class="block text-gray-700 font-medium mb-2">Email</label>
+                            <input type="email" id="email" name="email" class="w-full px-4 py-2 border border-gray-300 rounded-lg focus:ring-primary focus:border-primary transition" required>
+                        </div>
+                        <div class="mb-6">
+                            <label for="message" class="block text-gray-700 font-medium mb-2">Nội dung</label>
+                            <textarea id="message" name="message" rows="4" class="w-full px-4 py-2 border border-gray-300 rounded-lg focus:ring-primary focus:border-primary transition" required></textarea>
+                        </div>
+                        <button type="submit" class="w-full bg-primary text-white font-bold py-3 rounded-full hover:opacity-90 transition duration-300 shadow-md">
+                            Gửi Ngay
+                        </button>
+                    </form>
+                    <div id="form-message" class="mt-4 p-3 rounded-lg text-center hidden"></div>
+                </div>
+
+                
+                <div class="space-y-6">
+                    <div class="bg-white p-6 rounded-2xl shadow-xl">
+                        <h3 class="text-2xl font-semibold text-secondary mb-4">Thông Tin Liên Lạc</h3>
+                        <p class="flex items-center text-gray-700 mb-2">
+                            <span class="text-primary mr-3">📞</span> Điện thoại: 0961371407
+                        </p>
+                        <p class="flex items-center text-gray-700 mb-2">
+                            <span class="text-primary mr-3">📧</span> Email: kienz1904@gmail.com
+                        </p>
+                        <p class="flex items-center text-gray-700">
+                            <span class="text-primary mr-3">📍</span> Thành phố Hà Nội
+                    </div>
+
+                    
+                    <div class="bg-gray-200 h-64 rounded-2xl shadow-xl overflow-hidden">
+                        <div class="w-full h-full flex items-center justify-center text-gray-500 font-semibold">
+                            
+                            <p class="text-center p-4">Khu vực Bản Đồ (Placeholder)</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>    
+    <footer class="bg-secondary text-white mt-12">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-8 md:py-12">
+            <div class="grid grid-cols-2 md:grid-cols-4 gap-8">
+                <div>
+                    <h4 class="text-lg font-bold mb-3 border-b border-primary pb-1">Giới Thiệu</h4>
+                    <ul class="text-sm space-y-2">
+                        <li><a href="#" class="hover:text-primary transition" onclick="showPage('about')">Câu chuyện thương hiệu</a></li>
+                        <li><a href="#" class="hover:text-primary transition">Tuyển dụng</a></li>
+                        <li><a href="#" class="hover:text-primary transition">Chính sách bảo mật</a></li>
+                    </ul>
+                </div>
+                <div>
+                    <h4 class="text-lg font-bold mb-3 border-b border-primary pb-1">Hỗ Trợ</h4>
+                    <ul class="text-sm space-y-2">
+                        <li><a href="#" class="hover:text-primary transition">FAQ</a></li>
+                        <li><a href="#" class="hover:text-primary transition" onclick="showPage('contact')">Góp ý & Khiếu nại</a></li>
+                        <li><a href="#" class="hover:text-primary transition">Điều khoản sử dụng</a></li>
+                    </ul>
+                </div>
+                <div>
+                    <h4 class="text-lg font-bold mb-3 border-b border-primary pb-1">Mạng Xã Hội</h4>
+                    <div class="flex space-x-3 text-2xl">
+                        <a href="#" class="hover:text-primary transition">FB</a>
+                        <a href="#" class="hover:text-primary transition">IG</a>
+                        <a href="#" class="hover:text-primary transition">TikTok</a>
+                    </div>
+                </div>
+                <div class="col-span-2 md:col-span-1">
+                    <h4 class="text-lg font-bold mb-3 border-b border-primary pb-1">Đăng Ký Nhận KM</h4>
+                    <p class="text-sm mb-3">Nhận thông tin khuyến mãi mới nhất qua email!</p>
+                    <form>
+                        <input type="email" placeholder="Email của bạn..." class="w-full p-2 rounded-lg text-gray-800 mb-2" required>
+                        <button type="submit" class="w-full bg-primary text-secondary font-bold py-2 rounded-lg hover:bg-opacity-80 transition">Đăng Ký</button>
+                    </form>
+                </div>
+            </div>
+            <div class="mt-8 pt-6 border-t border-primary text-center text-sm">
+                &copy; 2025 Trà Sữa Ngọt Ngào. Bảo lưu mọi quyền.
+            </div>
+        </div>
+    </footer>
+    <button id="scrollToTopBtn" class="bg-primary text-white p-3 rounded-full shadow-lg hover:bg-opacity-90 transition duration-300">
+        <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 10l7-7m0 0l7 7m-7-7v18"></path></svg>
+    </button>
+    <script>
+        const navItems = document.querySelectorAll('.nav-item');
+        const pageContents = document.querySelectorAll('.page-content');
+        const mobileMenuBtn = document.getElementById('mobile-menu-btn');
+        const mobileMenu = document.getElementById('mobile-menu');
+        const menuTabs = document.querySelectorAll('.menu-tab');
+        const menuItems = document.querySelectorAll('.menu-item');
+        const scrollToTopBtn = document.getElementById('scrollToTopBtn');
+        function showPage(pageId) {
+            pageContents.forEach(content => {
+                content.classList.remove('active');
+            });            
+            const activePage = document.getElementById(pageId);
+            if (activePage) {
+                activePage.classList.add('active');
+            }
+            document.querySelectorAll('nav a.nav-item').forEach(item => {
+                item.classList.remove('active');
+                if (item.getAttribute('data-page') === pageId) {
+                    item.classList.add('active');
+                }
+            });
+            
+            document.querySelectorAll('#mobile-menu a.nav-item').forEach(item => {
+                item.classList.remove('active');
+                if (item.getAttribute('data-page') === pageId) {
+                    item.classList.add('active');
+                }
+            });
+            
+           
+            mobileMenu.classList.add('hidden');
+        }
+
+        
+        navItems.forEach(item => {
+            item.addEventListener('click', (e) => {
+                e.preventDefault();
+                const pageId = item.getAttribute('data-page');
+                showPage(pageId);
+                
+                window.scrollTo({ top: 0, behavior: 'smooth' }); 
+            });
+        });
+
+        
+        mobileMenuBtn.addEventListener('click', () => {
+            mobileMenu.classList.toggle('hidden');
+        });
+        
+       
+        const initialPage = window.location.hash ? window.location.hash.substring(1) : 'home';
+        showPage(initialPage);
+        
+       
+        menuTabs.forEach(tab => {
+            tab.addEventListener('click', () => {
+                const category = tab.getAttribute('data-category');
+
+                
+                menuTabs.forEach(t => {
+                    t.classList.remove('bg-primary', 'text-white', 'active-tab');
+                    t.classList.add('bg-white', 'text-secondary', 'border', 'border-primary');
+                });
+                tab.classList.add('bg-primary', 'text-white', 'active-tab');
+                tab.classList.remove('bg-white', 'text-secondary', 'border', 'border-primary');
+
+                
+                menuItems.forEach(item => {
+                    const itemCategory = item.getAttribute('data-category');
+                    if (category === 'all' || itemCategory === category) {
+                        item.style.display = 'block';
+                    } else {
+                        item.style.display = 'none';
+                    }
+                });
+            });
+        });
+        
+        
+        document.querySelector('.menu-tab[data-category="all"]').click();
+
+        
+        function handleContactForm(event) {
+            event.preventDefault();
+            const formMessage = document.getElementById('form-message');
+            
+            
+            formMessage.classList.remove('hidden', 'bg-red-100', 'text-red-700');
+            formMessage.classList.add('bg-green-100', 'text-green-700');
+            formMessage.textContent = 'Cảm ơn bạn! Lời nhắn của bạn đã được gửi thành công. Chúng tôi sẽ phản hồi sớm nhất.';
+            
+            
+            event.target.reset();
+
+           
+            setTimeout(() => {
+                formMessage.classList.add('hidden');
+            }, 5000);
+        }
+        
+       
+        window.onscroll = function() { scrollFunction() };
+
+        function scrollFunction() {
+            if (document.body.scrollTop > 200 || document.documentElement.scrollTop > 200) {
+                scrollToTopBtn.style.display = "block";
+            } else {
+                scrollToTopBtn.style.display = "none";
+            }
+        }
+
+        scrollToTopBtn.addEventListener('click', () => {
+            window.scrollTo({
+                top: 0,
+                behavior: 'smooth'
+            });
+        });
+
+    </script>
+</body>
+</html>
